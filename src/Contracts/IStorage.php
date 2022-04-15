@@ -26,7 +26,7 @@ interface IStorage
      * @throws DownloadException
      * @return Response
      * 
-     * 
+     * @throws DownloadException
      */
     public function download(string $filename, ?string $path = null): Response;
 }
