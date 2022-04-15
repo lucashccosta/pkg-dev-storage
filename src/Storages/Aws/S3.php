@@ -41,7 +41,9 @@ class S3 implements IStorage
                 headers: $result['@metadata']['headers']
             );
         } catch (Exception $e) {
-            throw new UploadException('Upload file error: ' . $e->getMessage());
+            throw new UploadException(
+                message: UploadException::DEFAULT_MESSAGE . ': ' . $e->getMessage()
+            );
         }
     }
 
@@ -62,7 +64,9 @@ class S3 implements IStorage
                 headers: $result['@metadata']['headers']
             );
         } catch (Exception $e) {
-            throw new DownloadException('Download file error: ' . $e->getMessage());
+            throw new DownloadException(
+                message: DownloadException::DEFAULT_MESSAGE . ': ' . $e->getMessage()
+            );
         }
     }
 
