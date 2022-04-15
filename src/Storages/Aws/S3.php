@@ -9,8 +9,8 @@ use Dev\Storage\Entities\Response;
 use Dev\Storage\Contracts\IStorage;
 use Dev\Storage\Exceptions\DownloadException;
 use Dev\Storage\Exceptions\UploadException;
-use Dev\Storage\Storages\BaseConfig;
 use Dev\Storage\Storages\Aws\S3Config;
+use Exception;
 use SplFileObject;
 
 class S3 implements IStorage
